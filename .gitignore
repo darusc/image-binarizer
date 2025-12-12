@@ -32,3 +32,31 @@
 */xsim/
 */ip_cache/
 */.srcs/
+
+
+# 1. IGNORE THE BUILD FOLDER
+# This single line ignores the .xpr, .runs, .cache, .gen, .sim, etc.
+# because we configured the Tcl script to put them all inside here.
+binarizer/
+
+# Vivado creates these in the folder where you run the script.
+*.jou
+*.log
+*.str
+*.zip
+*.os
+.Xil/
+
+# Prevent accidental committing of generated checkpoints or bitstreams
+# if they are created outside the build folder.
+*.dcp
+*.bit
+*.bin
+*.mcs
+
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*~
